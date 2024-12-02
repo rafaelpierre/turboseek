@@ -32,11 +32,11 @@ const Hero: FC<THeroProps> = ({
           height={18}
         />
         <span className="text-center text-base font-light leading-[normal] text-[#1B1B16]">
-          Powered by Together AI
+          Powered by Atlas
         </span>
       </a>
       <h2 className="bg-custom-gradient bg-clip-text pb-7 pt-2 text-center text-3xl font-semibold leading-[normal] lg:text-[64px]">
-        Search smarter & faster
+        Shine a Light on Your Data 🚀
       </h2>
 
       {/* input section */}
@@ -56,6 +56,7 @@ const Hero: FC<THeroProps> = ({
             onClick={() => handleClickSuggestion(item?.name)}
             key={item.id}
           >
+            {/*
             <Image
               unoptimized
               src={item.icon}
@@ -64,6 +65,7 @@ const Hero: FC<THeroProps> = ({
               height={16}
               className="w-[18px]"
             />
+            */}
             <span className="text-sm font-light leading-[normal] text-[#1B1B16]">
               {item.name}
             </span>
@@ -72,6 +74,7 @@ const Hero: FC<THeroProps> = ({
       </div>
 
       {/* Github link section */}
+      {/*
       <p className="text-center text-sm font-light leading-[normal] text-[#1B1B16]">
         Fully open source!{" "}
         <span className="text-sm font-medium underline">
@@ -84,6 +87,7 @@ const Hero: FC<THeroProps> = ({
           </a>
         </span>
       </p>
+      */}
     </div>
   );
 };
@@ -97,17 +101,17 @@ type suggestionType = {
 const suggestions: suggestionType[] = [
   {
     id: 1,
-    name: "How does photosynthesis work?",
-    icon: "/img/icon _leaf_.svg",
+    name: "🤖 What is Optimus?",
+    icon: "/img/icon _atom_.svg",
   },
   {
     id: 2,
-    name: "How can I get a 6 pack in 3 months?",
-    icon: "/img/icon _dumbell_.svg",
+    name: "🧐 What do I need to onboard my use case into Atlas?",
+    icon: "/img/icon _atom_.svg",
   },
   {
     id: 3,
-    name: "Can you explain the theory of relativity?",
+    name: "🚃 Please share some Convoy best practices.",
     icon: "/img/icon _atom_.svg",
   },
 ];

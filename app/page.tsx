@@ -65,6 +65,8 @@ export default function Home() {
       body: JSON.stringify({ question, sources }),
     });
 
+    console.log("Response: " + response);
+
     if (!response.ok) {
       throw new Error(response.statusText);
     }

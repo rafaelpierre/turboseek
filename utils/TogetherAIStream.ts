@@ -18,15 +18,6 @@ export interface TogetherAIStreamPayload {
   stream: boolean;
 }
 
-// TODO: Add back the Together TypeScript SDK with Helicone
-// const together = new Together({
-//   apiKey: process.env["TOGETHER_API_KEY"],
-//   baseURL: "https://together.helicone.ai/v1",
-//   defaultHeaders: {
-//     "Helicone-Auth": `Bearer ${process.env.HELICONE_API_KEY}`,
-//   },
-// });
-
 export async function TogetherAIStream(payload: TogetherAIStreamPayload) {
   const encoder = new TextEncoder();
   const decoder = new TextDecoder();

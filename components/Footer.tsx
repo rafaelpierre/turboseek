@@ -14,10 +14,11 @@ const Footer = () => {
             height={30}
           />
           <span className="text-base font-medium leading-[normal]">
-            TurboSeek.io
+            Atlas Platform
           </span>
         </a>
         <div className="flex items-center gap-3">
+        {/*
           <Link href={"https://x.com/nutlope"} target="_blank">
             <Image
               unoptimized
@@ -36,6 +37,7 @@ const Footer = () => {
               height={16}
             />{" "}
           </Link>
+        */}
         </div>
       </div>
     </>

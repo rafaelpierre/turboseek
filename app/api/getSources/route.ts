@@ -8,6 +8,7 @@ let searchEngine: "bing" | "serper" = "serper";
 export async function POST(request: Request) {
   let { question } = await request.json();
 
+  {/*
   if (searchEngine === "bing") {
     const BING_API_KEY = process.env["BING_API_KEY"];
     if (!BING_API_KEY) {
@@ -63,7 +64,7 @@ export async function POST(request: Request) {
         num: 6,
       }),
     });
-
+    
     const rawJSON = await response.json();
 
     const SerperJSONSchema = z.object({
@@ -78,5 +79,7 @@ export async function POST(request: Request) {
     }));
 
     return NextResponse.json(results);
-  }
+    */}
+
+    return NextResponse.json({});
 }

@@ -1,15 +1,7 @@
 import { NextResponse } from "next/server";
-import Together from "together-ai";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 
-const together = new Together({
-  apiKey: process.env["TOGETHER_API_KEY"],
-  baseURL: "https://together.helicone.ai/v1",
-  defaultHeaders: {
-    "Helicone-Auth": `Bearer ${process.env.HELICONE_API_KEY}`,
-  },
-});
 
 export async function POST(request: Request) {
   let { question } = await request.json();
@@ -17,6 +9,7 @@ export async function POST(request: Request) {
   const schema = z.array(z.string()).length(3);
   const jsonSchema = zodToJsonSchema(schema, "mySchema");
 
+  {/*
   const similarQuestions = await together.chat.completions.create({
     messages: [
       {
@@ -37,6 +30,7 @@ export async function POST(request: Request) {
   });
 
   let questions = similarQuestions.choices?.[0].message?.content || "[]";
+  */}
 
-  return NextResponse.json(JSON.parse(questions));
+  return NextResponse.json({});
 }
